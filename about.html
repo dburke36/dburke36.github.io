@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="scripts.js">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <!-- This navigation bar is the Bar located at the top of the website that includes
+     the HTML for the HOME, ABOUT, CONTACT, and LOGIN/SIGNUP buttons. It also includes the 
+     title of the project or website with an image -->
+    <div class="navbar">
+        <!-- Logo and Title -->
+        <div class="logo-title">
+            <img src="Images/KSU.png" alt="Logo"> <!-- Replace 'logo.png' with the path to your logo -->
+            <div class="title">Project Milestone #1</div>
+        </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="loginBtn">Login / Signup</button>
+            </ul>
+        </div>
+
+    <!-- Modal for Login/Signup -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Tabbed Navigation -->
+            <!-- This section is with the LOGIN/SIGNUP popup. This code is used for the navigation 
+             between the LOGIN and SIGNUP tabs. -->
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Login')">Login</button>
+                <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+            </div>
+
+        <!-- Login Form -->
+        <!-- This section is the actual code for the LOGIN form. It includes input
+             boxes for email and password for login. Form validation code can also be found
+             in the scripts file  -->
+        <div id="Login" class="tabcontent" style="display: block;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="text" id="loginEmail" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="loginPassword" name="password" required>
+
+                <button type="submit">Login</button>
+
+                <div id="loginErrorMessage" style="color: red; display: none;"></div>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <!-- This section is the actual code for the SIGNUP form. It includes input
+             boxes for email and password for login and additional retype password box.
+             Form validation code can also be found in the scripts file  -->
+        <div id="Signup" class="tabcontent">
+            <h2>Signup</h2>
+            <form id="signupForm">
+                <label for="signupEmail">Email:</label>
+                <input type="text" id="signupEmail" name="email" required>
+
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="password" required>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="submit">Signup</button>
+
+                <div id="signupErrorMessage" style="color: red; display: none;"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<!-- The about section is very simple. Just has a header and a paragraph section to exaplain
+ why the website was made and the plans for it. I also include a similar sub section to talk 
+ a little about me. I even included in an image to fill in some of the empty space. -->
+<div class="about-section">
+    <h1>About This Website</h1>
+    <p>This Website was Developed for the Class IT3203: Intro to Web Developement. 
+        This project will be updated throughout the semester as new content and methods
+        are learned. Iteration one covers the basics of HTML CSS and JavaScript and Focus 
+        on a clean, user-friendly design website. The site will also include Add basic 
+        interactivity using JavaScript such as form validation and toggling elements.
+        I have even implemented some things I have learned outside of D2L. To Be Continued...
+    </p>
+
+    <h2>About Me</h2>
+    <p>My name is Drake Burke and I am on my final year at Kennesaw State University. I will 
+        be graduating in the spring with a Bachelors Degree in Cyber Security. I have always been 
+        fascinated with computers, and have seen the trouble that comes with the technology. I 
+        chose Cyber Security as my career choice because I want to make a difference in the Cyber 
+        world. I hope to one day work for a company that stops or prevents these criminals from 
+        making the cyber world an unsafe place.   
+    </p>
+
+    <img src="Images/KSUowls.jpg" alt="KSU Owls">
+</div>
+
+    <!-- Footer -->
+    <!-- Simple footer with assignment title and a hyper link the the contact page -->
+    <footer class="footer">
+        <div class="container">
+            <p>IT3203: Intro to Web Developement. Project Milestone #1.</p>
+            <p><a href="contact.html">Contact Us!</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
