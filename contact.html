@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="scripts.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <!-- This navigation bar is the Bar located at the top of the website that includes
+     the HTML for the HOME, ABOUT, CONTACT, and LOGIN/SIGNUP buttons. It also includes the 
+     title of the project or website with an image -->
+    <div class="navbar">
+        <!-- Logo and Title -->
+        <div class="logo-title">
+            <img src="Images/KSU.png" alt="Logo"> <!-- Replace 'logo.png' with the path to your logo -->
+            <div class="title">Project Milestone #1</div>
+        </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="loginBtn">Login / Signup</button>
+            </ul>
+        </div>
+
+    <!-- Modal for Login/Signup -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Tabbed Navigation -->
+            <!-- This section is with the LOGIN/SIGNUP popup. This code is used for the navigation 
+             between the LOGIN and SIGNUP tabs. -->
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Login')">Login</button>
+                <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+            </div>
+
+            <!-- Login Form -->
+            <!-- This section is the actual code for the LOGIN form. It includes input
+             boxes for email and password for login. Form validation code can also be found
+             in the scripts file  -->
+            <div id="Login" class="tabcontent" style="display: block;">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="email">Email:</label>
+                    <input type="text" id="loginEmail" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+
+                    <button type="submit">Login</button>
+
+                    <div id="loginErrorMessage" style="color: red; display: none;"></div>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <!-- This section is the actual code for the SIGNUP form. It includes input
+             boxes for email and password for login and additional retype password box.
+             Form validation code can also be found in the scripts file  -->
+            <div id="Signup" class="tabcontent">
+                <h2>Signup</h2>
+                <form id="signupForm">
+                    <label for="signupEmail">Email:</label>
+                    <input type="text" id="signupEmail" name="email" required>
+
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <button type="submit">Signup</button>
+
+                    <div id="signupErrorMessage" style="color: red; display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <!-- Since we need a contact page for this project was searching google for ideas. Came across a 
+     contact form like most business websites have and I wanted to give it a try. I Made just a basic
+     contact form using similar elements to my login/signup form. I used placeholders her to give a brief
+     description for what imformation should go in the box. -->
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <form class="contact-form" action="submit_contact_form.php" method="POST" id="contact-form"> 
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Contact Information -->
+        <!-- For my contact info added icons from an external website using link command. I provide a 
+         fake email, my school email, and the address to KSU -->
+        <div class="contact-info">
+            <p>You can also reach me at:</p>
+            <p><span><i class="fa-solid fa-phone"></i><strong>  Phone:</strong> (123) 456-7890</span></p>
+            <p><i class="fa-solid fa-envelope"></i><strong>  Email:</strong> <a href="mailto:info@example.com">dburke36@students.kennesaw.edu</a></p>
+            <p><i class="fa-solid fa-location-pin"></i><strong>  Address:</strong> 1000 Chastain Rd NW, Kennesaw, GA 30144</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Simple footer with assignment title and a hyper link the the contact page -->
+    <footer class="footer">
+        <div class="container">
+            <p>IT3203: Intro to Web Developement. Project Milestone #1.</p>
+            <p><a href="contact.html">Contact Us!</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,487 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 4000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1px 20px;
+    width: 100%;
+}
+
+/* Logo and title container */
+.logo-title {
+    display: flex;
+    align-items: center; 
+}
+
+/* Logo styling */
+.logo-title img {
+    height: 80px; 
+    margin-right: 5px;
+}
+
+/* Title styling */
+.logo-title .title {
+    color: white;
+    font-size: 24px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 3px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative; 
+    background-image: url('Images/TandemCrop.jpg');
+    background-size: cover;
+    background-position: center; 
+    color: #fff;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-section a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-section a:hover {
+    background-color: #0056b3;
+}
+
+/* features Section */
+.features {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature-cards img{
+    width: 75%; 
+    height: 100; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.feature-cards .card {
+    flex: 1 1 300px;
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-cards .card h3 {
+    margin-bottom: 20px;
+}
+
+.feature-cards .card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* passion Section */
+.passion {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    overflow: hidden;
+}
+
+.passion h2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.passion-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.passion-cards img {
+    width: 75%; 
+    height: 100; 
+    object-fit: cover;
+    border-radius: 10px; 
+    max-width: 100%;
+    display: block;
+}
+
+.passion-cards video {
+    width: 50%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 10px; 
+    max-width: 100%;
+    display: block;
+}
+
+.passion-cards .card {
+    flex: 1 1 300px;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; 
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.passion-cards .card h3 {
+    margin-bottom: 20px;
+}
+
+.passion-cards .card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.sim-gear-list {
+    text-align: left;
+    display: inline-block;
+    list-style-type: disc; /* Change to your preferred list style */
+    padding-left: 20px; /* Adjust padding */
+    margin: 10px 0; /* Margin for spacing */
+    color: #333; /* Text color */
+}
+
+.sim-gear-list li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Login Popup */
+/* Style for Login/Signup button */
+.login-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #575757; 
+}
+
+/* The Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #333;
+    cursor: pointer;
+}
+
+/* Tab Navigation */
+.tab {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.tab button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab button:hover {
+    background-color: #ccc;
+}
+
+/* Tab Content */
+.tabcontent {
+    display: none;
+}
+
+/* Form Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error Message */
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+
+ /* About Page Content Styling */
+ .about-page {
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3b324e7;
+ }
+ 
+ .about-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    padding: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.photo {
+    margin-right: 20px;
+}
+.photo img {
+    border-radius: 75%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.photo .caption {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #2b2a2a;
+    text-align: center;
+}
+.bio {
+    max-width: 800px;
+}
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+p {
+    margin-bottom: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px; 
+    height: 8vh; 
+    width: 100%;
+}
+
+footer .container p{
+    margin-bottom: 5px;
+}
+
+
+/* Contact Form Styling */
+.contact-container {
+    padding: 50px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #575757;
+}
+
+/* Contact Information Styling */
+.contact-info {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #575757;
+}
