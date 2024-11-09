@@ -9,12 +9,12 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files (HTML, CSS, JS) from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files (HTML, CSS, JS) from the 'root' directory
+app.use(express.static(path.join(__dirname)));
 
 // Route for the root URL
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Change 'index.html' to your main HTML file
+    res.sendFile(path.join(__dirname, 'index.html')); // Change 'index.html' to your main HTML file
 });
 
 // Route for the login form submission
@@ -39,8 +39,8 @@ app.post('/signup', (req, res) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Serve static files (your HTML file with the contact form, if located in a "public" folder)
-app.use(express.static('public'));
+// Serve static files (your HTML file with the contact form)
+app.use(express.static(__dirname));
 
 // Handle form submission
 app.post("/submit_contact_form", (req, res) => {
