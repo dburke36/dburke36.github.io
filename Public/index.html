@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="scripts.js">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <!-- This navigation bar is the Bar located at the top of the website that includes
+     the HTML for the HOME, ABOUT, CONTACT, and LOGIN/SIGNUP buttons. It also includes the 
+     title of the project or website with an image -->
+    <div class="navbar">
+        <!-- Logo and Title -->
+        <div class="logo-title">
+            <img src="Images/KSU.png" alt="Logo"> <!-- Replace 'logo.png' with the path to your logo -->
+            <div class="title">Project Milestone #2</div>
+        </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="loginBtn">Login / Signup</button>
+            </ul>
+        </div>
+
+    <!-- Modal for Login/Signup -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- Tabbed Navigation -->
+            <!-- This section is with the LOGIN/SIGNUP popup. This code is used for the navigation 
+             between the LOGIN and SIGNUP tabs. -->
+            <div class="tab">
+                <button class="tablinks active" onclick="openTab(event, 'Login')">Login</button>
+                <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+            </div>
+
+            <!-- Login Form -->
+            <!-- This section is the actual code for the LOGIN form. It includes input
+             boxes for email and password for login. Form validation code can also be found
+             in the scripts file  -->
+            <div id="Login" class="tabcontent" style="display: block;">
+                <h2>Login</h2>
+                <form id="loginForm" action="/login" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="text" id="loginEmail" name="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+
+                    <button type="submit">Login</button>
+
+                    <div id="loginErrorMessage" style="color: red; display: none;"></div>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <!-- This section is the actual code for the SIGNUP form. It includes input
+             boxes for email and password for login and additional retype password box.
+             Form validation code can also be found in the scripts file  -->
+            <div id="Signup" class="tabcontent">
+                <h2>Signup</h2>
+                <form id="signupForm" action="/signup" method="POST">
+                    <label for="signupEmail">Email:</label>
+                    <input type="text" id="signupEmail" name="email" required>
+
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <button type="submit">Signup</button>
+
+                    <div id="signupErrorMessage" style="color: red; display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- This section has just a simple backdrop of blacksand and a Welcome Title, a short sentence
+     explain why the website was made, and a link to the about page. -->
+     <header class="hero-section">
+        <div class="overlay"></div> <!-- Add this div for the background image overlay -->
+        <div class="container">
+            <h2>Welcome to My Website</h2>
+            <p>This Website has been Updated for Project Milestone #2 and will cover my Passion for Drifting</p>
+            <a href="about.html">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <!-- This section covers the features section that explains the Development, 
+         Design and the form validation used. I have chosen to represent this section 
+         using cards to break up the text into 3 different sections-->
+
+         <section id="passion" class="passion">
+            <div class="container">
+                <h2>My Passion</h2>
+                <div class="passion-cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Drifting</h3>
+                                <p>My passion for drifting has been a journey fueled by my love for cars. Ever since I can 
+                                    remember, I would take every car game I owned and experiment with making the cars slide, 
+                                    trying to replicate that thrilling sensation. I had known about drifting as a real-life 
+                                    sport for a while, but it wasn't until 2021 that I truly began to pay attention. The 
+                                    turning point came in 2023 when I attended my first Formula Drift event at Road Atlanta, 
+                                    and from that moment, I was hooked. The excitement of watching skilled drivers navigate 
+                                    the track with precision and flair ignited a fire within me. I returned to Road Atlanta 
+                                    in 2024 and even had the opportunity to experience the action at Formula Drift Orlando, 
+                                    solidifying my love for this exhilarating sport. One day, I hope to earn my own spot on 
+                                    the Formula Drift roster and compete among the best in the sport.</p>
+                        </div>
+                        <img src="Images/RTR.jpg" alt="RTR">
+                        <img src="Images/Orlando.JPG" alt="Orlando">
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Content Creation</h3>
+                            <p>Creating sim drifting content is a true passion of mine, where the thrill of racing meets the 
+                                art of precision driving. The virtual world allows me to explore intricate techniques and 
+                                push the limits of what’s possible, all while connecting with a vibrant community of fellow 
+                                enthusiasts. I love crafting engaging videos that showcase not just the adrenaline rush of 
+                                drifting, but also the creativity involved in car customization and track selection. Sharing
+                                 my journey, tips, and experiences inspires others to dive into the exhilarating realm of sim 
+                                 drifting, and it fuels my desire to continue honing my skills and artistry in this exciting space.</p>
+                        </div>
+                        <video src="Videos/Video.mp4" autoplay muted loop playsinline poster="Images/FallbackImage.jpg"></video>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>My Sim Setup</h3>
+                            <p>My sim racing setup offers an incredibly realistic experience, closely mimicking the feel of 
+                                driving a real car. The MOZA R9 Wheel Base delivers precise force feedback, allowing me to 
+                                sense the road's texture and the car's dynamics, making each drift feel authentic. Coupled 
+                                with the MOZA CRP Pedals, which provide responsive and adjustable resistance, I can truly 
+                                gauge braking and acceleration, enhancing my control. The MOZA Sequential and H-pattern shifters 
+                                allow for smooth gear transitions, while my custom-built handbrake gives me the ability to 
+                                initiate drifts with confidence. Together, this equipment creates an immersive environment 
+                                that not only sharpens my skills but also captures the thrill and excitement of real-world driving.</p>
+                                <h4>My Sim Gear</h4>
+                                <ul class="sim-gear-list">
+                                    <li><a href="https://mozaracing.com/wheel-base-r9" target="_blank">MOZA R9 Wheel Base</a></li>
+                                    <li><a href="https://mozaracing.com/crp-pedals" target="_blank">MOZA CRP Pedals</a></li>
+                                    <li><a href="https://mozaracing.com/product/moza-sgp-sequential-shifter" target="_blank">MOZA Sequential Shifter</a></li>
+                                    <li><a href="https://mozaracing.com/product/moza-hgp-shifter" target="_blank">MOZA H-pattern Shifter</a></li>
+                                    <li><a href="https://www.ebay.com/itm/374233621425?itmmeta=01J9J214PPY7S0K0GFHS7QH2W9&hash=item57220fe3b1:g:3BkAAOSwko5jDdHR&itmprp=enc%3AAQAJAAAA4Mxmj%2BiGvOveHXEBClPb29iavv5Bj0TzCtCfFEi%2FGT9GsCPhrdEkQLkU4Le4oB0GHwEny0NOIJKVwGGWIfZwclRPJ7SyOPr75Xd83VPmGfwR9bq8EyqhjPQtj9w72FGuu1bktK%2BVz%2FBte7fM6tOKZSnXyYI7n6PIkDAf6SI%2FsjKJ70K75Qknd1x1wq6OsNH3e1dnHSTpEPivK6IkLvmmsl6eKtRh%2Bi3emKWdZYg1nxqD40srrq6%2FeyKTt0JXvTL4G%2F5VbfzIKZ3ZxiCNQJmDCp99Acd%2Bbj4ZeGK7O35FKpuK%7Ctkp%3ABk9SR7jLhMLMZA" target="_blank">Ebay Handbrake</a></li>
+                                </ul>
+                        </div>
+                        <img src="Images/SimSetupOn.jpg" alt="SimSetupOn">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Website Features</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Web Development</h3>
+                            <p>This website was designed for Project Milestone #1 and is the start
+                                to three iterations. This is iteration one and includes a <a href="index.html">Home Page</a>, 
+                                an <a href="about.html">About Page</a>, and a <a href="contact.html">Contact Page</a>. The 
+                                website also includes the start to a functional Login/Signup feature. More to come with furture iterations.</p>
+                    </div>
+                    <img src="Images/WebDevelopment.jpg" alt="Web Design">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Design</h3>
+                        <p>The Design for this website was to keep it simple and clean. Colors are kept simple to 
+                        avoid any weird mix of colors. Keeping a darker scheme of colors makes it easy on the 
+                        eyes of the user.</p>
+                    </div>
+                        <img src="Images/WebDesign.png" alt="Web Design">
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Form Validation</h3>
+                        <p>A Login/Signup button has been created to allow the user to Login or Signup. In this stage 
+                        of the website, an alert notifes user of a successful login or signup. Form validation has 
+                        also been used to ensure valid emails are used. Passwords must also be the same for signup 
+                        and meet a 8 character minimum.</p>
+                    </div>
+                    <img src="Images/FormValidation.jpg" alt="Form Validation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Simple footer with assignment title and a hyper link the the contact page -->
+    <footer class="footer">
+        <div class="container">
+            <p>IT3203: Intro to Web Developement. Project Milestone #2.</p>
+            <p><a href="contact.html">Contact Us!</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
